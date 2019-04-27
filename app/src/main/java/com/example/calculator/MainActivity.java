@@ -41,7 +41,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.minus).setOnClickListener(this);
         findViewById(R.id.del).setOnClickListener(this);
         findViewById(R.id.equal).setOnClickListener(this);
-
+        findViewById(R.id.root).setOnClickListener(this);
+        findViewById(R.id.backsp).setOnClickListener(this);
+        findViewById(R.id.opbrac).setOnClickListener(this);
+        findViewById(R.id.clbrac).setOnClickListener(this);
+        findViewById(R.id.perc).setOnClickListener(this);
+        findViewById(R.id.func).setOnClickListener(this);
     }
 
     @Override
@@ -87,7 +92,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
               case R.id.num9:
                   e2.setText(e2.getText() + "9");
                   break;
+              case R.id.perc:
+                  operationClicked("%");
+                  break;
+              case R.id.clbrac:
+                  operationClicked(")");
+                  break;
+              case R.id.opbrac:
+                  operationClicked("(");
+                  break;
+              case R.id.root:
+                  e2.setText(e2.getText()+"sqrt(");
+                  break;
+              case R.id.backsp:
+                  if(e2.length()!=0)
+                  {   String t=e2.getText().toString();
+                      char []a=t.toCharArray();
+                      if(t.length()>4 && a[t.length() - 2] == 't' && a[t.length() - 1] == '(')
+                      {e2.setText(t.substring(0,t.length()-5));
+                      }
+                     else if(t.length()>0)
+                          e2.setText(t.substring(0,t.length()-1));
 
+                  }
+                 else if(e1.length()!=0)
+                  {  e2.setText(e1.getText().toString());
+                     e1.setText("");
+                      String t=e2.getText().toString();
+                      char []a=t.toCharArray();
+                      if(t.length()>4 && a[t.length() - 2] == 't' && a[t.length() - 1] == '(')
+                      {e2.setText(t.substring(0,t.length()-5));
+                      }
+                      else if(t.length()>0)
+                          e2.setText(t.substring(0,t.length()-1));
+
+
+                  }
+                  break;
               case R.id.dot:
                   if (count == 0 && e2.length() != 0) {
                       e2.setText(e2.getText() + ".");
@@ -130,12 +171,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                   {
                       //evaluate the expression
                       result=evaluator.evaluate(expression);
-                      //insert expression and result in sqlite database if expression is valid and not 0.0
                       e2.setText(result+"");
                   }
                   catch (Exception e)
                   {
-                      e2.setText("Invalid Expression");
+                      e2.setText("Error");
                       e1.setText("");
                       expression="";
                       e.printStackTrace();
