@@ -1,6 +1,6 @@
 # Calculator
 
-![Screenshot_20190325-212722(1)](https://user-images.githubusercontent.com/39608443/54936501-9a829700-4f48-11e9-8b83-d9103eb393b3.png)
-
-![Screenshot_20190325-212804](https://user-images.githubusercontent.com/39608443/54936507-9d7d8780-4f48-11e9-9036-4bd3009d2639.png)
-![Screenshot_20190325-212831(1)](https://user-images.githubusercontent.com/39608443/54936513-a0787800-4f48-11e9-957f-58363bcc6e29.png)
+![Screenshot_20190427-151451](https://user-images.githubusercontent.com/39608443/56923977-79820880-6ae9-11e9-8fa5-b0a9cf635134.png)
+![Screenshot_20190427-151732](https://user-images.githubusercontent.com/39608443/56924068-aafad400-6ae9-11e9-9a99-c7b3f0f7c7d8.png)
+![Screenshot_20190427-151819](https://user-images.githubusercontent.com/39608443/56924073-ad5d2e00-6ae9-11e9-83df-9545ce0ce5e1.png)
+![Screenshot_20190427-151828](https://user-images.githubusercontent.com/39608443/56924075-ae8e5b00-6ae9-11e9-8f99-0322ea08f815.png)
